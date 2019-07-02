@@ -18,23 +18,93 @@
     <div class="wrapper">
         <header class="header">
             <div class="h-links">
-                <a href="">
+                <a href="index.html">
                     <p class="blue-console">Blue Console</p>
                 </a>
                 <nav class="nav">
-                    <ul>
-                        <li class="nav-items">
-                            <a href="#">About</a>
-                            <a href="#">Portfolio</a>
-                            <a href="#">Services</a>
-                            <a href="#">Our Team</a>
-                            <a href="#">Contact Us</a>
-                        </li>
+                    <ul class="nav-items">
+                        <a href="#">About</a>
+                        <a href="#">Portfolio</a>
+                        <a href="#">Services</a>
+                        <a href="#">Our Team</a>
+                        <a href="#">Contact Us</a>
                     </ul>
                 </nav>
+
+                <div class="burger" id="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
             </div>
+            <style>
+
+                @media screen and (max-width: 768px) {
+                    body {
+                        overflow-x: hidden
+                    }
+
+                    .nav-items {
+                        position: absolute;
+                        right: 0;
+                        top: 19vh;
+                        height: 80vh;
+                        display: flex;
+                        flex-direction: column;
+                        background-color: rgba(0, 0, 0,0.8);
+                        width: 100%;
+                        align-items: center;
+                        transform: translateX(100%); 
+                        transition: transform 0.3s ease-in; 
+                    }
+                     
+                    .nav-items a{
+                        border-bottom: 2px solid rgb(255, 231, 18);
+                        width: 100%;
+                        text-align: center;
+                    }
+
+                    .nav-clicked {
+                        transform: translateX(0%);
+                    }
+
+                    #burger {
+                        display: block;
+                        cursor: pointer;
+                        position: relative;
+                        right: 20px;
+
+                    }
+
+                    .blue-console {
+                        position: relative;
+                        left: 10%;
+                    }
+
+                    #bold-text {
+                        font-size: 30px;
+                    }
+
+                    .more,
+                    .contact {
+                        display: block;
+                    }
+
+                    #abt {
+                        font-size: 30px;
+                        margin: 0;
+                    }
+
+                    .about {
+                        padding: 20px;
+                        margin-top: 0;
+                    }
+
+
+                }
+            </style>
             <div class="front-page-bold-text">
-                <p>Code<span>.</span>Test<span>.</span>Deploy<span>.</span>loop</p>
+                <p id="bold-text">Code<span>.</span>Test<span>.</span>Deploy<span>.</span>loop</>
             </div>
             <div class="para-btn">
                 <div class="front-page-para">
@@ -49,7 +119,7 @@
         </header>
         <main>
             <section class="about">
-                <h1 class="abt">About Us</h1>
+                <h1 class="abt" id="abt">About Us</h1>
                 <p>Blue console is a software company founded on the heart of Switzerland in the Zurich city. We focus
                     in the moulding of high quality
                     Websites, Mobile apps, Learning apps and Online apps. We also help digitize your idea for you.
@@ -242,7 +312,7 @@
                     <div class="con2">
                         <p class="c-service">Customer service</p>
                         <p>Email: Blueconsole@gmail.com <span>Phone: +277638399338</span></p>
-                        
+
                     </div>
                     <div class="ourSocials">
                         <i class="fab fa-twitter"></i>
@@ -269,39 +339,11 @@
             </section>
             <footer class="footer">
                 <div class="products">
-                    ::before
-                    <a href="#">Our works</a>
-                    ::before
-                    <a href="#">Club</a>
-                    ::before
-                    <a href="#">News</a>
-                    ::before
-                    <a href="#">Announcemnt</a>
-                    ::before
-                    <div class="products">
-                        ::before
-                        <a href="#">Our works</a>
-                        ::before
-                        <a href="#">Club</a>
-                        ::before
-                        <a href="#">News</a>
-                        ::before
-                        <a href="#">Announcemnt</a>
-                        ::before
-                        <div class="products">
-                            ::before
-                            <a href="#">Our works</a>
-                            ::before
-                            <a href="#">Club</a>
-                            ::before
-                            <a href="#">News</a>
-                            ::before
-                            <a href="#">Announcemnt</a>
-                            ::before
-                        </div>
+                </div>
             </footer>
         </main>
     </div>
+    <script src="script/script.js"></script>
 </body>
 
 </html>
